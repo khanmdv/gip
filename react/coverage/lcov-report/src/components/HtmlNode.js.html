@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/components/HtmlNode.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../prettify.css">
+    <link rel="stylesheet" href="../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header high">
+    <h1>Code coverage report for <span class="entity">src/components/HtmlNode.js</span></h1>
+    <h2>
+        Statements: <span class="metric">100% <small>(7 / 7)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">100% <small>(0 / 0)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">100% <small>(1 / 1)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">100% <small>(7 / 7)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../index.html">All files</a> &#187; <a href="index.html">src/components/</a> &#187; HtmlNode.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">14</span>
+<span class="cline-any cline-yes">14</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">14</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">15</span>
+<span class="cline-any cline-yes">15</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">15</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">14</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/** 
+ * Copyright (C) 2015 Anonymous Guy 
+ * 
+ * All Rights Reserved
+ * 
+ * You may use, distribute, criticize or tear apart this code under the
+ * terms of the FREE license. Don't worry about patent infringements
+ * or any **** of that kind.
+ */
+&nbsp;
+"use strict";
+&nbsp;
+// Lib Imports
+var React = require("react");
+var marked = require("marked");
+&nbsp;
+/**
+ * Renders a HTML Node from a string. Uses GitHub markdown to convert markdown
+ * to HTML.
+ * 
+ */
+var HtmlNode = React.createClass({
+    displayName: "HtmlNode",
+&nbsp;
+    /** 
+     * Properties
+     * 
+     * {html} HTML Code as string.
+     */
+    PropTypes: {
+        html: React.PropTypes.string
+    },
+&nbsp;
+    /**
+     * Renders marked down content.
+     */
+    render: function render() {
+        var self = this;
+        var html = this.props.html;
+&nbsp;
+        return React.createElement("div", { className: "html-node", dangerouslySetInnerHTML: {
+                __html: marked(new String(html), {
+                    renderer: new marked.Renderer(),
+                    gfm: true,
+                    tables: true,
+                    breaks: true,
+                    pedantic: false,
+                    sanitize: true,
+                    smartLists: true,
+                    smartypants: false
+                })
+            } });
+    }
+});
+&nbsp;
+module.exports = HtmlNode;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9tb2hraGFuL1V0aWwvZ2lwL3JlYWN0L3NyYy9jb21wb25lbnRzL0h0bWxOb2RlLmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7QUFVQSxZQUFZLENBQUM7OztBQUdiLElBQUksS0FBSyxHQUFHLE9BQU8sQ0FBQyxPQUFPLENBQUMsQ0FBQztBQUM3QixJQUFJLE1BQU0sR0FBRyxPQUFPLENBQUMsUUFBUSxDQUFDLENBQUM7Ozs7Ozs7QUFPL0IsSUFBSSxRQUFRLEdBQUcsS0FBSyxDQUFDLFdBQVcsQ0FBQzs7Ozs7Ozs7QUFNN0IsYUFBUyxFQUFHO0FBQ1IsWUFBSSxFQUFHLEtBQUssQ0FBQyxTQUFTLENBQUMsTUFBTTtLQUNoQzs7Ozs7QUFLRCxVQUFNLEVBQUcsa0JBQVU7QUFDZixZQUFJLElBQUksR0FBRyxJQUFJLENBQUM7QUFDaEIsWUFBSSxJQUFJLEdBQUcsSUFBSSxDQUFDLEtBQUssQ0FBQyxJQUFJLENBQUM7O0FBRTNCLGVBQ0ksNkJBQUssU0FBUyxFQUFDLFdBQVcsRUFBQyx1QkFBdUIsRUFBRTtBQUNoRCxzQkFBTSxFQUFHLE1BQU0sQ0FBQyxJQUFJLE1BQU0sQ0FBQyxJQUFJLENBQUMsRUFBRTtBQUN0Qiw0QkFBUSxFQUFFLElBQUksTUFBTSxDQUFDLFFBQVEsRUFBRTtBQUMvQix1QkFBRyxFQUFFLElBQUk7QUFDVCwwQkFBTSxFQUFFLElBQUk7QUFDWiwwQkFBTSxFQUFFLElBQUk7QUFDWiw0QkFBUSxFQUFFLEtBQUs7QUFDZiw0QkFBUSxFQUFFLElBQUk7QUFDZCw4QkFBVSxFQUFFLElBQUk7QUFDaEIsK0JBQVcsRUFBRSxLQUFLO2lCQUNyQixDQUFDO2FBQ2IsQUFBQyxHQUFHLENBQ1A7S0FDTDtDQUNKLENBQUMsQ0FBQzs7QUFFSCxNQUFNLENBQUMsT0FBTyxHQUFHLFFBQVEsQ0FBQyIsImZpbGUiOiIvVXNlcnMvbW9oa2hhbi9VdGlsL2dpcC9yZWFjdC9zcmMvY29tcG9uZW50cy9IdG1sTm9kZS5qcyIsInNvdXJjZXNDb250ZW50IjpbIi8qKiBcbiAqIENvcHlyaWdodCAoQykgMjAxNSBBbm9ueW1vdXMgR3V5IFxuICogXG4gKiBBbGwgUmlnaHRzIFJlc2VydmVkXG4gKiBcbiAqIFlvdSBtYXkgdXNlLCBkaXN0cmlidXRlLCBjcml0aWNpemUgb3IgdGVhciBhcGFydCB0aGlzIGNvZGUgdW5kZXIgdGhlXG4gKiB0ZXJtcyBvZiB0aGUgRlJFRSBsaWNlbnNlLiBEb24ndCB3b3JyeSBhYm91dCBwYXRlbnQgaW5mcmluZ2VtZW50c1xuICogb3IgYW55ICoqKiogb2YgdGhhdCBraW5kLlxuICovXG5cbid1c2Ugc3RyaWN0JztcblxuLy8gTGliIEltcG9ydHNcbnZhciBSZWFjdCA9IHJlcXVpcmUoJ3JlYWN0Jyk7XG52YXIgbWFya2VkID0gcmVxdWlyZSgnbWFya2VkJyk7XG5cbi8qKlxuICogUmVuZGVycyBhIEhUTUwgTm9kZSBmcm9tIGEgc3RyaW5nLiBVc2VzIEdpdEh1YiBtYXJrZG93biB0byBjb252ZXJ0IG1hcmtkb3duXG4gKiB0byBIVE1MLlxuICogXG4gKi9cbnZhciBIdG1sTm9kZSA9IFJlYWN0LmNyZWF0ZUNsYXNzKHtcbiAgICAvKiogXG4gICAgICogUHJvcGVydGllc1xuICAgICAqIFxuICAgICAqIHtodG1sfSBIVE1MIENvZGUgYXMgc3RyaW5nLlxuICAgICAqL1xuICAgIFByb3BUeXBlcyA6IHtcbiAgICAgICAgaHRtbCA6IFJlYWN0LlByb3BUeXBlcy5zdHJpbmdcbiAgICB9LFxuICAgIFxuICAgIC8qKlxuICAgICAqIFJlbmRlcnMgbWFya2VkIGRvd24gY29udGVudC5cbiAgICAgKi9cbiAgICByZW5kZXIgOiBmdW5jdGlvbigpe1xuICAgICAgICB2YXIgc2VsZiA9IHRoaXM7XG4gICAgICAgIHZhciBodG1sID0gdGhpcy5wcm9wcy5odG1sO1xuICAgICAgICBcbiAgICAgICAgcmV0dXJuIChcbiAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiaHRtbC1ub2RlXCIgZGFuZ2Vyb3VzbHlTZXRJbm5lckhUTUw9e3tcbiAgICAgICAgICAgICAgICBfX2h0bWwgOiBtYXJrZWQobmV3IFN0cmluZyhodG1sKSwge1xuICAgICAgICAgICAgICAgICAgICAgICAgICAgIHJlbmRlcmVyOiBuZXcgbWFya2VkLlJlbmRlcmVyKCksXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgZ2ZtOiB0cnVlLFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIHRhYmxlczogdHJ1ZSxcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICBicmVha3M6IHRydWUsXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgcGVkYW50aWM6IGZhbHNlLFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIHNhbml0aXplOiB0cnVlLFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIHNtYXJ0TGlzdHM6IHRydWUsXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgc21hcnR5cGFudHM6IGZhbHNlXG4gICAgICAgICAgICAgICAgICAgICAgICB9KVxuICAgICAgICAgICAgfX0gLz5cbiAgICAgICAgKTtcbiAgICB9XG59KTtcblxubW9kdWxlLmV4cG9ydHMgPSBIdG1sTm9kZTtcbiJdfQ==</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon Aug 24 2015 16:28:23 GMT-0700 (PDT)</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/components/CommentsTable.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../prettify.css">
+    <link rel="stylesheet" href="../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header high">
+    <h1>Code coverage report for <span class="entity">src/components/CommentsTable.js</span></h1>
+    <h2>
+        Statements: <span class="metric">88.89% <small>(8 / 9)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">50% <small>(1 / 2)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">100% <small>(3 / 3)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">88.89% <small>(8 / 9)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../index.html">All files</a> &#187; <a href="index.html">src/components/</a> &#187; CommentsTable.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/** 
+ * Copyright (C) 2015 Anonymous Guy 
+ * 
+ * All Rights Reserved
+ * 
+ * You may use, distribute, criticize or tear apart this code under the
+ * terms of the FREE license. Don't worry about patent infringements
+ * or any **** of that kind.
+ */
+&nbsp;
+"use strict";
+&nbsp;
+// Lib Imports
+var React = require("react");
+&nbsp;
+// Our Imports
+var CommentCell = require("./CommentCell");
+&nbsp;
+/**
+ * Renders the issue comments.
+ */
+var CommentsTable = React.createClass({
+    displayName: "CommentsTable",
+&nbsp;
+    PropTypes: {
+        comments: React.PropTypes.array
+    },
+&nbsp;
+    /**
+     * Renders comment rows.
+     * @private
+     */
+    _renderCommentRows: function _renderCommentRows() {
+        return this.props.comments.map(function (comment, i) {
+            return React.createElement(CommentCell, { key: i, comment: comment });
+        });
+    },
+    render: function render() {
+        <span class="missing-if-branch" title="else path not taken" >E</span>if (this.props.comments) {
+            return React.createElement(
+                "table",
+                { className: "table comments-table" },
+                React.createElement(
+                    "colgroup",
+                    null,
+                    React.createElement("col", { width: "10%" }),
+                    React.createElement("col", { width: "90%" })
+                ),
+                React.createElement(
+                    "tbody",
+                    null,
+                    this._renderCommentRows()
+                )
+            );
+        } else {
+<span class="cstat-no" title="statement not covered" >            return React.createElement("span", null);</span>
+        }
+    }
+});
+&nbsp;
+module.exports = CommentsTable;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9tb2hraGFuL1V0aWwvZ2lwL3JlYWN0L3NyYy9jb21wb25lbnRzL0NvbW1lbnRzVGFibGUuanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7OztBQVVBLFlBQVksQ0FBQzs7O0FBR2IsSUFBSSxLQUFLLEdBQUcsT0FBTyxDQUFDLE9BQU8sQ0FBQyxDQUFDOzs7QUFHN0IsSUFBSSxXQUFXLEdBQUcsT0FBTyxDQUFDLGVBQWUsQ0FBQyxDQUFDOzs7OztBQUszQyxJQUFJLGFBQWEsR0FBRyxLQUFLLENBQUMsV0FBVyxDQUFDOzs7QUFDbEMsYUFBUyxFQUFHO0FBQ1IsZ0JBQVEsRUFBRyxLQUFLLENBQUMsU0FBUyxDQUFDLEtBQUs7S0FDbkM7Ozs7OztBQU1ELHNCQUFrQixFQUFHLDhCQUFVO0FBQzNCLGVBQU8sSUFBSSxDQUFDLEtBQUssQ0FBQyxRQUFRLENBQUMsR0FBRyxDQUFDLFVBQVMsT0FBTyxFQUFFLENBQUMsRUFBQztBQUMvQyxtQkFDSSxvQkFBQyxXQUFXLElBQUMsR0FBRyxFQUFFLENBQUMsQUFBQyxFQUFDLE9BQU8sRUFBRSxPQUFPLEFBQUMsR0FBRyxDQUMzQztTQUNMLENBQUMsQ0FBQztLQUNOO0FBQ0QsVUFBTSxFQUFHLGtCQUFVO0FBQ2YsWUFBSSxJQUFJLENBQUMsS0FBSyxDQUFDLFFBQVEsRUFBQztBQUNwQixtQkFDSTs7a0JBQU8sU0FBUyxFQUFDLHNCQUFzQjtnQkFDbkM7OztvQkFDSSw2QkFBSyxLQUFLLEVBQUMsS0FBSyxHQUFFO29CQUNsQiw2QkFBSyxLQUFLLEVBQUMsS0FBSyxHQUFFO2lCQUNYO2dCQUNYOzs7b0JBQ0UsSUFBSSxDQUFDLGtCQUFrQixFQUFFO2lCQUNuQjthQUNKLENBQ1Y7U0FDTCxNQUFNO0FBQ0gsbUJBQVEsaUNBQWEsQ0FBRTtTQUMxQjtLQUNKO0NBQ0osQ0FBQyxDQUFDOztBQUVILE1BQU0sQ0FBQyxPQUFPLEdBQUcsYUFBYSxDQUFDIiwiZmlsZSI6Ii9Vc2Vycy9tb2hraGFuL1V0aWwvZ2lwL3JlYWN0L3NyYy9jb21wb25lbnRzL0NvbW1lbnRzVGFibGUuanMiLCJzb3VyY2VzQ29udGVudCI6WyIvKiogXG4gKiBDb3B5cmlnaHQgKEMpIDIwMTUgQW5vbnltb3VzIEd1eSBcbiAqIFxuICogQWxsIFJpZ2h0cyBSZXNlcnZlZFxuICogXG4gKiBZb3UgbWF5IHVzZSwgZGlzdHJpYnV0ZSwgY3JpdGljaXplIG9yIHRlYXIgYXBhcnQgdGhpcyBjb2RlIHVuZGVyIHRoZVxuICogdGVybXMgb2YgdGhlIEZSRUUgbGljZW5zZS4gRG9uJ3Qgd29ycnkgYWJvdXQgcGF0ZW50IGluZnJpbmdlbWVudHNcbiAqIG9yIGFueSAqKioqIG9mIHRoYXQga2luZC5cbiAqL1xuXG4ndXNlIHN0cmljdCc7XG5cbi8vIExpYiBJbXBvcnRzXG52YXIgUmVhY3QgPSByZXF1aXJlKCdyZWFjdCcpO1xuXG4vLyBPdXIgSW1wb3J0c1xudmFyIENvbW1lbnRDZWxsID0gcmVxdWlyZSgnLi9Db21tZW50Q2VsbCcpO1xuXG4vKipcbiAqIFJlbmRlcnMgdGhlIGlzc3VlIGNvbW1lbnRzLlxuICovXG52YXIgQ29tbWVudHNUYWJsZSA9IFJlYWN0LmNyZWF0ZUNsYXNzKHtcbiAgICBQcm9wVHlwZXMgOiB7XG4gICAgICAgIGNvbW1lbnRzIDogUmVhY3QuUHJvcFR5cGVzLmFycmF5ICAgIFxuICAgIH0sXG4gICAgXG4gICAgLyoqXG4gICAgICogUmVuZGVycyBjb21tZW50IHJvd3MuXG4gICAgICogQHByaXZhdGVcbiAgICAgKi9cbiAgICBfcmVuZGVyQ29tbWVudFJvd3MgOiBmdW5jdGlvbigpe1xuICAgICAgICByZXR1cm4gdGhpcy5wcm9wcy5jb21tZW50cy5tYXAoZnVuY3Rpb24oY29tbWVudCwgaSl7XG4gICAgICAgICAgICByZXR1cm4gKFxuICAgICAgICAgICAgICAgIDxDb21tZW50Q2VsbCBrZXk9e2l9IGNvbW1lbnQ9e2NvbW1lbnR9IC8+XG4gICAgICAgICAgICApO1xuICAgICAgICB9KTtcbiAgICB9LFxuICAgIHJlbmRlciA6IGZ1bmN0aW9uKCl7XG4gICAgICAgIGlmICh0aGlzLnByb3BzLmNvbW1lbnRzKXtcbiAgICAgICAgICAgIHJldHVybiAoXG4gICAgICAgICAgICAgICAgPHRhYmxlIGNsYXNzTmFtZT1cInRhYmxlIGNvbW1lbnRzLXRhYmxlXCI+XG4gICAgICAgICAgICAgICAgICAgIDxjb2xncm91cD5cbiAgICAgICAgICAgICAgICAgICAgICAgIDxjb2wgd2lkdGg9XCIxMCVcIi8+XG4gICAgICAgICAgICAgICAgICAgICAgICA8Y29sIHdpZHRoPVwiOTAlXCIvPlxuICAgICAgICAgICAgICAgICAgICA8L2NvbGdyb3VwPlxuICAgICAgICAgICAgICAgICAgICA8dGJvZHk+XG4gICAgICAgICAgICAgICAgICAgICB7dGhpcy5fcmVuZGVyQ29tbWVudFJvd3MoKX1cbiAgICAgICAgICAgICAgICAgICAgPC90Ym9keT5cbiAgICAgICAgICAgICAgICA8L3RhYmxlPiBcbiAgICAgICAgICAgICk7XG4gICAgICAgIH0gZWxzZSB7XG4gICAgICAgICAgICByZXR1cm4gKDxzcGFuPjwvc3Bhbj4pO1xuICAgICAgICB9XG4gICAgfVxufSk7XG5cbm1vZHVsZS5leHBvcnRzID0gQ29tbWVudHNUYWJsZTtcbiJdfQ==</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon Aug 24 2015 16:28:23 GMT-0700 (PDT)</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

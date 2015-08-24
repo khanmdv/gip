@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/models/GitIssueComment.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../prettify.css">
+    <link rel="stylesheet" href="../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header high">
+    <h1>Code coverage report for <span class="entity">src/models/GitIssueComment.js</span></h1>
+    <h2>
+        Statements: <span class="metric">92.31% <small>(12 / 13)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">100% <small>(0 / 0)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">83.33% <small>(5 / 6)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">92.31% <small>(12 / 13)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../index.html">All files</a> &#187; <a href="index.html">src/models/</a> &#187; GitIssueComment.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/** 
+ * Copyright (C) 2015 Anonymous Guy 
+ * 
+ * All Rights Reserved
+ * 
+ * You may use, distribute, criticize or tear apart this code under the
+ * terms of the FREE license. Don't worry about patent infringements
+ * or any **** of that kind.
+ */
+&nbsp;
+"use strict";
+&nbsp;
+// Lib Imports
+var moment = require("moment");
+&nbsp;
+// Our Imports
+var utils = require("../utils");
+var GitUser = require("./GitUser");
+var ModelObject = require("./ModelObject");
+&nbsp;
+/**
+ * GitIssueComment class - Represents a comment.
+ */
+var GitIssueComment = function GitIssueComment() {};
+&nbsp;
+/**
+ * Class Methods.
+ */
+utils.extend(GitIssueComment, {
+&nbsp;
+    /**
+     * Mapping between REST API and class properties.
+     */
+    JSONKeyValueMap: function JSONKeyValueMap() {
+        return {
+            id: "id",
+            createdAt: "created_at",
+            commentMessage: "body",
+            user: "user"
+        };
+    },
+&nbsp;
+    /**
+     * Transformer functions
+     */
+    idTransformer: function idTransformer(rawValue) {
+        return parseInt(rawValue);
+    },
+&nbsp;
+    /** Convert the user json into a GitUser Object */
+    userTransformer: function userTransformer(rawValue) {
+        return ModelObject.getModelOfClassFromJSON(GitUser, rawValue);
+    },
+&nbsp;
+    /** Convert a string date into monent instance */
+    createdAtTransformer: function createdAtTransformer(rawValue) {
+        return moment(rawValue, "YYYY-MM-DDTHH:mm:ssZ");
+    }
+});
+&nbsp;
+/**
+ * Instance Methods
+ */
+GitIssueComment.prototype = {
+    toString: <span class="fstat-no" title="function not covered" >function toString() {</span>
+<span class="cstat-no" title="statement not covered" >        return JSON.stringify({</span>
+            id: this.id,
+            createdAt: this.createdAt,
+            commentMessage: this.commentMessage,
+            user: this.user.toString()
+        }, null, 4);
+    }
+};
+&nbsp;
+module.exports = GitIssueComment;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9tb2hraGFuL1V0aWwvZ2lwL3JlYWN0L3NyYy9tb2RlbHMvR2l0SXNzdWVDb21tZW50LmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7QUFVQSxZQUFZLENBQUM7OztBQUdiLElBQUksTUFBTSxHQUFHLE9BQU8sQ0FBQyxRQUFRLENBQUMsQ0FBQzs7O0FBRy9CLElBQUksS0FBSyxHQUFHLE9BQU8sQ0FBQyxVQUFVLENBQUMsQ0FBQztBQUNoQyxJQUFJLE9BQU8sR0FBRyxPQUFPLENBQUMsV0FBVyxDQUFDLENBQUM7QUFDbkMsSUFBSSxXQUFXLEdBQUcsT0FBTyxDQUFDLGVBQWUsQ0FBQyxDQUFDOzs7OztBQUszQyxJQUFJLGVBQWUsR0FBRywyQkFBVyxFQUNoQyxDQUFDOzs7OztBQUtGLEtBQUssQ0FBQyxNQUFNLENBQUMsZUFBZSxFQUFFOzs7OztBQUsxQixtQkFBZSxFQUFHLDJCQUFXO0FBQ3pCLGVBQU87QUFDSCxnQkFBTyxJQUFJO0FBQ1gsdUJBQWMsWUFBWTtBQUMxQiw0QkFBbUIsTUFBTTtBQUN6QixrQkFBUyxNQUFNO1NBQ2xCLENBQUM7S0FDTDs7Ozs7QUFLRCxpQkFBYSxFQUFHLHVCQUFTLFFBQVEsRUFBRTtBQUMvQixlQUFPLFFBQVEsQ0FBQyxRQUFRLENBQUMsQ0FBQztLQUM3Qjs7O0FBR0QsbUJBQWUsRUFBRyx5QkFBUyxRQUFRLEVBQUU7QUFDakMsZUFBTyxXQUFXLENBQUMsdUJBQXVCLENBQUMsT0FBTyxFQUFFLFFBQVEsQ0FBQyxDQUFDO0tBQ2pFOzs7QUFHRCx3QkFBb0IsRUFBRyw4QkFBUyxRQUFRLEVBQUM7QUFDckMsZUFBTyxNQUFNLENBQUMsUUFBUSxFQUFFLHNCQUFzQixDQUFDLENBQUM7S0FDbkQ7Q0FDSixDQUFDLENBQUM7Ozs7O0FBS0gsZUFBZSxDQUFDLFNBQVMsR0FBRztBQUN4QixZQUFRLEVBQUcsb0JBQVc7QUFDbEIsZUFBTyxJQUFJLENBQUMsU0FBUyxDQUFDO0FBQ2xCLGdCQUFPLElBQUksQ0FBQyxFQUFFO0FBQ2QsdUJBQWMsSUFBSSxDQUFDLFNBQVM7QUFDNUIsNEJBQW1CLElBQUksQ0FBQyxjQUFjO0FBQ3RDLGtCQUFTLElBQUksQ0FBQyxJQUFJLENBQUMsUUFBUSxFQUFFO1NBQ2hDLEVBQUUsSUFBSSxFQUFFLENBQUMsQ0FBQyxDQUFDO0tBQ2Y7Q0FDSixDQUFDOztBQUVGLE1BQU0sQ0FBQyxPQUFPLEdBQUcsZUFBZSxDQUFDIiwiZmlsZSI6Ii9Vc2Vycy9tb2hraGFuL1V0aWwvZ2lwL3JlYWN0L3NyYy9tb2RlbHMvR2l0SXNzdWVDb21tZW50LmpzIiwic291cmNlc0NvbnRlbnQiOlsiLyoqIFxuICogQ29weXJpZ2h0IChDKSAyMDE1IEFub255bW91cyBHdXkgXG4gKiBcbiAqIEFsbCBSaWdodHMgUmVzZXJ2ZWRcbiAqIFxuICogWW91IG1heSB1c2UsIGRpc3RyaWJ1dGUsIGNyaXRpY2l6ZSBvciB0ZWFyIGFwYXJ0IHRoaXMgY29kZSB1bmRlciB0aGVcbiAqIHRlcm1zIG9mIHRoZSBGUkVFIGxpY2Vuc2UuIERvbid0IHdvcnJ5IGFib3V0IHBhdGVudCBpbmZyaW5nZW1lbnRzXG4gKiBvciBhbnkgKioqKiBvZiB0aGF0IGtpbmQuXG4gKi9cblxuJ3VzZSBzdHJpY3QnO1xuXG4vLyBMaWIgSW1wb3J0c1xudmFyIG1vbWVudCA9IHJlcXVpcmUoJ21vbWVudCcpO1xuXG4vLyBPdXIgSW1wb3J0c1xudmFyIHV0aWxzID0gcmVxdWlyZSgnLi4vdXRpbHMnKTtcbnZhciBHaXRVc2VyID0gcmVxdWlyZSgnLi9HaXRVc2VyJyk7XG52YXIgTW9kZWxPYmplY3QgPSByZXF1aXJlKCcuL01vZGVsT2JqZWN0Jyk7XG5cbi8qKlxuICogR2l0SXNzdWVDb21tZW50IGNsYXNzIC0gUmVwcmVzZW50cyBhIGNvbW1lbnQuXG4gKi9cbnZhciBHaXRJc3N1ZUNvbW1lbnQgPSBmdW5jdGlvbigpIHtcbn07XG5cbi8qKlxuICogQ2xhc3MgTWV0aG9kcy5cbiAqL1xudXRpbHMuZXh0ZW5kKEdpdElzc3VlQ29tbWVudCwge1xuICAgIFxuICAgIC8qKlxuICAgICAqIE1hcHBpbmcgYmV0d2VlbiBSRVNUIEFQSSBhbmQgY2xhc3MgcHJvcGVydGllcy5cbiAgICAgKi9cbiAgICBKU09OS2V5VmFsdWVNYXAgOiBmdW5jdGlvbigpIHtcbiAgICAgICAgcmV0dXJuIHtcbiAgICAgICAgICAgIFwiaWRcIiA6IFwiaWRcIixcbiAgICAgICAgICAgIFwiY3JlYXRlZEF0XCIgOiBcImNyZWF0ZWRfYXRcIixcbiAgICAgICAgICAgIFwiY29tbWVudE1lc3NhZ2VcIiA6IFwiYm9keVwiLFxuICAgICAgICAgICAgXCJ1c2VyXCIgOiBcInVzZXJcIlxuICAgICAgICB9O1xuICAgIH0sXG4gICAgXG4gICAgLyoqXG4gICAgICogVHJhbnNmb3JtZXIgZnVuY3Rpb25zXG4gICAgICovXG4gICAgaWRUcmFuc2Zvcm1lciA6IGZ1bmN0aW9uKHJhd1ZhbHVlKSB7XG4gICAgICAgIHJldHVybiBwYXJzZUludChyYXdWYWx1ZSk7XG4gICAgfSxcbiAgICBcbiAgICAvKiogQ29udmVydCB0aGUgdXNlciBqc29uIGludG8gYSBHaXRVc2VyIE9iamVjdCAqL1xuICAgIHVzZXJUcmFuc2Zvcm1lciA6IGZ1bmN0aW9uKHJhd1ZhbHVlKSB7XG4gICAgICAgIHJldHVybiBNb2RlbE9iamVjdC5nZXRNb2RlbE9mQ2xhc3NGcm9tSlNPTihHaXRVc2VyLCByYXdWYWx1ZSk7XG4gICAgfSxcbiAgICBcbiAgICAvKiogQ29udmVydCBhIHN0cmluZyBkYXRlIGludG8gbW9uZW50IGluc3RhbmNlICovXG4gICAgY3JlYXRlZEF0VHJhbnNmb3JtZXIgOiBmdW5jdGlvbihyYXdWYWx1ZSl7XG4gICAgICAgIHJldHVybiBtb21lbnQocmF3VmFsdWUsICdZWVlZLU1NLUREVEhIOm1tOnNzWicpO1xuICAgIH1cbn0pO1xuXG4vKipcbiAqIEluc3RhbmNlIE1ldGhvZHNcbiAqL1xuR2l0SXNzdWVDb21tZW50LnByb3RvdHlwZSA9IHtcbiAgICB0b1N0cmluZyA6IGZ1bmN0aW9uKCkge1xuICAgICAgICByZXR1cm4gSlNPTi5zdHJpbmdpZnkoe1xuICAgICAgICAgICAgXCJpZFwiIDogdGhpcy5pZCxcbiAgICAgICAgICAgIFwiY3JlYXRlZEF0XCIgOiB0aGlzLmNyZWF0ZWRBdCxcbiAgICAgICAgICAgIFwiY29tbWVudE1lc3NhZ2VcIiA6IHRoaXMuY29tbWVudE1lc3NhZ2UsXG4gICAgICAgICAgICBcInVzZXJcIiA6IHRoaXMudXNlci50b1N0cmluZygpXG4gICAgICAgIH0sIG51bGwsIDQpO1xuICAgIH1cbn07XG5cbm1vZHVsZS5leHBvcnRzID0gR2l0SXNzdWVDb21tZW50O1xuIl19</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon Aug 24 2015 16:28:23 GMT-0700 (PDT)</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

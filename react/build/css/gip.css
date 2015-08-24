@@ -1,0 +1,221 @@
+/**
+ * CSS Overrides
+ */
+
+BODY{
+    background-color : #fafafa;
+}
+
+CODE BR{
+    display:none;
+}
+
+DIV.app-header{
+    position : fixed;
+    top : 0px;
+    left : 0px;
+    width : 100%;
+    height : 70px;
+    padding : 5px;
+    box-shadow: 0px 0px 7px #888;
+    -moz-box-shadow: 0px 0px 7px #888;
+    -webkit-box-shadow:  0px 0px 7px #888;
+    background:#FFF url(../img/git.png) center center no-repeat;
+    z-index : 0;
+}
+
+DIV.app-container {
+    width : 100%;
+    height : 100%;
+}
+
+DIV.loading-div {
+    background: #fff url('../img/loading.gif') center center no-repeat;
+    position: fixed;
+    z-index: 999;
+    height: 2em;
+    width: 2em;
+    overflow: show;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+DIV.loading-div:before {
+    content: '';
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+DIV.issues-header{
+    padding : 5px;
+    position:fixed;
+    background-color:white;
+    top:0
+}
+
+DIV.issues-container, DIV.issue-detail-container{
+    margin-top:80px;
+}
+
+DIV.issues-message{
+    width : inherit;
+    padding-top : 50px;
+    min-height : 200px;
+    text-align : center
+}
+
+DIV.issues-container IMG.issue-gravatar{
+    width : 28px;
+    height:28px;
+    border-radius : 20px;
+    -moz-border-radius : 20px;
+    -webkit-border-radius : 20px;
+    -ms-border-radius : 20px;
+}
+
+DIV.issues-table, DIV.issue-detail-container {
+    z-index :0;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.22);
+    -moz-box-shadow: 0 1px 2px 0 rgba(0,0,0,0.22);
+    -webkit-box-shadow: 0 1px 2px 0 rgba(0,0,0,0.22);
+}
+
+
+DIV.issues-container DIV.issues-table, DIV.issue-detail-container{
+    background-color: white;
+}
+
+DIV.issues-container DIV.issues-table THEAD{
+    background-color : #EEE;
+}
+
+DIV.issues-container DIV.issues-table TBODY TR:first-child TD,
+DIV.issue-comments-container DIV.issues-comments TBODY TR:first-child TD
+{
+    border-top : none;
+}
+
+DIV.issues-container DIV.issues-table TABLE THEAD TD:first-child
+{
+    border-bottom:solid 1px #DDD;    
+}
+
+DIV.issues-container DIV.issues-table TBODY TD{
+    border-bottom : solid 1px #AAA;
+    padding-left : 20px;
+}
+
+DIV.issues-container DIV.issues-table TBODY TD H3{
+    margin-top:5px;
+}
+
+DIV.issues-container DIV.issues-table TBODY TD:last-child
+{
+    border-bottom:none;
+}
+
+DIV.html-node CODE{
+    font-family : "Courier new", "Verdana", "Arial";
+}
+
+DIV.local-loading-div{
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+DIV.issues-table DIV.html-node IMG{
+    display:none;
+}
+
+DIV.issues-table TABLE TR:hover{
+    background-color : rgba(200,200,200,0.3) !important;
+}
+
+DIV.issues-table DIV.issue-cell DIV.issue-cell-user{
+    font-size:90%;
+}
+
+DIV.issue-detail-container{
+
+    z-index: -1;
+}
+
+DIV.issues-table DIV.issue-cell H4.issue-title, 
+DIV.issue-detail-container H3.issue-title,
+DIV.issue-detail-container i.issue-state {
+    display:inline-block;
+}
+
+DIV.issues-table DIV.issue-cell i.issue-state{
+    font-size:115%;
+}
+
+DIV.issues-table DIV.issue-cell DIV.issue-summary{
+    color : #555;
+    font-size:90%;
+}
+
+DIV.issues-paginator{
+    text-align:center;
+}
+
+DIV.issue-detail-container{
+    padding : 10px 20px;
+}
+
+DIV.issue-detail-container i.issue-state{
+    font-size : 150%;
+}
+
+DIV.issue-detail-container IMG.issue-gravatar{
+    width : 40px;
+    height:40px;
+    border-radius : 3px;
+    -moz-border-radius : 3px;
+    -webkit-border-radius : 3px;
+    -ms-border-radius : 3px;
+    
+}
+
+DIV.issue-detail-container TABLE.comments-table DIV.issue-comment-cell{
+    background-color: rgba(200, 200, 200, 0.1);
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius : 3px;
+    -moz-border-radius : 3px;
+    -webkit-border-radius : 3px;
+    -ms-border-radius : 3px;
+    width : 80%;
+}
+
+DIV.issue-detail-container TABLE.comments-table TD,
+DIV.issue-detail-container TABLE.comments-table TR
+{
+    border : none;
+}
+
+
+DIV.issue-cell SPAN.issue-label,
+DIV.issue-detail-container SPAN.issue-label
+ {
+    display: inline-block;
+    margin-bottom: 2px;
+    vertical-align: 1px;
+    border-radius : 3px;
+    -moz-border-radius : 3px;
+    -webkit-border-radius : 3px;
+    -ms-border-radius : 3px;
+}
+

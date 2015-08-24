@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/utils.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../prettify.css">
+    <link rel="stylesheet" href="../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header high">
+    <h1>Code coverage report for <span class="entity">src/utils.js</span></h1>
+    <h2>
+        Statements: <span class="metric">85.71% <small>(12 / 14)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">57.14% <small>(8 / 14)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">75% <small>(3 / 4)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">85.71% <small>(12 / 14)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../index.html">All files</a> &#187; <a href="index.html">src/</a> &#187; utils.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">109</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">109</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">28</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">28</span>
+<span class="cline-any cline-yes">85</span>
+<span class="cline-any cline-yes">85</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">28</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/** 
+ * Copyright (C) 2015 Anonymous Guy 
+ * 
+ * All Rights Reserved
+ * 
+ * You may use, distribute, criticize or tear apart this code under the
+ * terms of the FREE license. Don't worry about patent infringements
+ * or any **** of that kind.
+ */
+&nbsp;
+"use strict";
+&nbsp;
+module.exports = {
+    assert: function assert(condition, message) {
+        var warn = console.warn ? console.warn : <span class="fstat-no" title="function not covered" ><span class="branch-1 cbranch-no" title="branch not covered" >function () {</span>};</span>
+&nbsp;
+        if (!condition) {
+            <span class="missing-if-branch" title="else path not taken" >E</span>if (typeof window === "undefined") {
+                // Must be test env
+                throw new Error(message);
+            } else {
+                // We are in browser. Don't throw an exception.
+<span class="cstat-no" title="statement not covered" >                warn("WARNING!!! %s", message);</span>
+            }
+        }
+    },
+    extend: function extend(toObj, fromObj) {
+&nbsp;
+        <span class="missing-if-branch" title="if path not taken" >I</span>if (!fromObj) {
+<span class="cstat-no" title="statement not covered" >            return toObj;</span>
+        }
+&nbsp;
+        for (var prop in fromObj) {
+            <span class="missing-if-branch" title="else path not taken" >E</span>if (fromObj.hasOwnProperty(prop)) {
+                toObj[prop] = fromObj[prop];
+            }
+        }
+&nbsp;
+        return toObj;
+    },
+    trimStr: function trimStr(str) {
+        str = str || <span class="branch-1 cbranch-no" title="branch not covered" >"";</span>
+        return String.prototype.trim ? str.trim() : <span class="branch-1 cbranch-no" title="branch not covered" >str.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, "");</span>
+    }
+};
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9tb2hraGFuL1V0aWwvZ2lwL3JlYWN0L3NyYy91dGlscy5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7O0FBVUEsWUFBWSxDQUFDOztBQUViLE1BQU0sQ0FBQyxPQUFPLEdBQUc7QUFDYixVQUFNLEVBQUcsZ0JBQVMsU0FBUyxFQUFFLE9BQU8sRUFBQztBQUNqQyxZQUFJLElBQUksR0FBRyxPQUFPLENBQUMsSUFBSSxHQUFHLE9BQU8sQ0FBQyxJQUFJLEdBQUcsWUFBVSxFQUFFLENBQUM7O0FBRXRELFlBQUksQ0FBQyxTQUFTLEVBQUM7QUFDWCxnQkFBSSxPQUFPLE1BQU0sS0FBSyxXQUFXLEVBQUU7O0FBRS9CLHNCQUFNLElBQUksS0FBSyxDQUFDLE9BQU8sQ0FBQyxDQUFDO2FBQzVCLE1BQU07O0FBRUgsb0JBQUksQ0FBQyxlQUFlLEVBQUUsT0FBTyxDQUFDLENBQUM7YUFDbEM7U0FDSjtLQUNKO0FBQ0QsVUFBTSxFQUFHLGdCQUFTLEtBQUssRUFBRSxPQUFPLEVBQUM7O0FBRTdCLFlBQUksQ0FBQyxPQUFPLEVBQUM7QUFDVCxtQkFBTyxLQUFLLENBQUM7U0FDaEI7O0FBRUQsYUFBSyxJQUFJLElBQUksSUFBSSxPQUFPLEVBQUM7QUFDckIsZ0JBQUksT0FBTyxDQUFDLGNBQWMsQ0FBQyxJQUFJLENBQUMsRUFBQztBQUM3QixxQkFBSyxDQUFDLElBQUksQ0FBQyxHQUFHLE9BQU8sQ0FBQyxJQUFJLENBQUMsQ0FBQzthQUMvQjtTQUNKOztBQUVELGVBQU8sS0FBSyxDQUFDO0tBQ2hCO0FBQ0QsV0FBTyxFQUFHLGlCQUFTLEdBQUcsRUFBQztBQUNuQixXQUFHLEdBQUcsR0FBRyxJQUFJLEVBQUUsQ0FBQztBQUNoQixlQUFPLE1BQU0sQ0FBQyxTQUFTLENBQUMsSUFBSSxHQUFHLEdBQUcsQ0FBQyxJQUFJLEVBQUUsR0FBRyxHQUFHLENBQUMsT0FBTyxDQUFDLG9DQUFvQyxFQUFFLEVBQUUsQ0FBQyxDQUFDO0tBQ3JHO0NBQ0osQ0FBQyIsImZpbGUiOiIvVXNlcnMvbW9oa2hhbi9VdGlsL2dpcC9yZWFjdC9zcmMvdXRpbHMuanMiLCJzb3VyY2VzQ29udGVudCI6WyIvKiogXG4gKiBDb3B5cmlnaHQgKEMpIDIwMTUgQW5vbnltb3VzIEd1eSBcbiAqIFxuICogQWxsIFJpZ2h0cyBSZXNlcnZlZFxuICogXG4gKiBZb3UgbWF5IHVzZSwgZGlzdHJpYnV0ZSwgY3JpdGljaXplIG9yIHRlYXIgYXBhcnQgdGhpcyBjb2RlIHVuZGVyIHRoZVxuICogdGVybXMgb2YgdGhlIEZSRUUgbGljZW5zZS4gRG9uJ3Qgd29ycnkgYWJvdXQgcGF0ZW50IGluZnJpbmdlbWVudHNcbiAqIG9yIGFueSAqKioqIG9mIHRoYXQga2luZC5cbiAqL1xuXG4ndXNlIHN0cmljdCc7XG5cbm1vZHVsZS5leHBvcnRzID0ge1xuICAgIGFzc2VydCA6IGZ1bmN0aW9uKGNvbmRpdGlvbiwgbWVzc2FnZSl7XG4gICAgICAgIHZhciB3YXJuID0gY29uc29sZS53YXJuID8gY29uc29sZS53YXJuIDogZnVuY3Rpb24oKXt9O1xuICAgICAgICBcbiAgICAgICAgaWYgKCFjb25kaXRpb24pe1xuICAgICAgICAgICAgaWYgKHR5cGVvZiB3aW5kb3cgPT09ICd1bmRlZmluZWQnKSB7XG4gICAgICAgICAgICAgICAgLy8gTXVzdCBiZSB0ZXN0IGVudlxuICAgICAgICAgICAgICAgIHRocm93IG5ldyBFcnJvcihtZXNzYWdlKTtcbiAgICAgICAgICAgIH0gZWxzZSB7XG4gICAgICAgICAgICAgICAgLy8gV2UgYXJlIGluIGJyb3dzZXIuIERvbid0IHRocm93IGFuIGV4Y2VwdGlvbi5cbiAgICAgICAgICAgICAgICB3YXJuKCdXQVJOSU5HISEhICVzJywgbWVzc2FnZSk7XG4gICAgICAgICAgICB9XG4gICAgICAgIH1cbiAgICB9LFxuICAgIGV4dGVuZCA6IGZ1bmN0aW9uKHRvT2JqLCBmcm9tT2JqKXtcbiAgICAgICAgXG4gICAgICAgIGlmICghZnJvbU9iail7XG4gICAgICAgICAgICByZXR1cm4gdG9PYmo7XG4gICAgICAgIH1cbiAgICAgICAgXG4gICAgICAgIGZvciAodmFyIHByb3AgaW4gZnJvbU9iail7XG4gICAgICAgICAgICBpZiAoZnJvbU9iai5oYXNPd25Qcm9wZXJ0eShwcm9wKSl7XG4gICAgICAgICAgICAgICAgdG9PYmpbcHJvcF0gPSBmcm9tT2JqW3Byb3BdO1xuICAgICAgICAgICAgfVxuICAgICAgICB9XG4gICAgICAgIFxuICAgICAgICByZXR1cm4gdG9PYmo7XG4gICAgfSxcbiAgICB0cmltU3RyIDogZnVuY3Rpb24oc3RyKXtcbiAgICAgICAgc3RyID0gc3RyIHx8ICcnO1xuICAgICAgICByZXR1cm4gU3RyaW5nLnByb3RvdHlwZS50cmltID8gc3RyLnRyaW0oKSA6IHN0ci5yZXBsYWNlKC9eW1xcc1xcdUZFRkZcXHhBMF0rfFtcXHNcXHVGRUZGXFx4QTBdKyQvZywgJycpO1xuICAgIH1cbn07XG4iXX0=</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon Aug 24 2015 16:28:23 GMT-0700 (PDT)</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

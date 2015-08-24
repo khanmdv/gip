@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/components/IssuesTable.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../prettify.css">
+    <link rel="stylesheet" href="../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header high">
+    <h1>Code coverage report for <span class="entity">src/components/IssuesTable.js</span></h1>
+    <h2>
+        Statements: <span class="metric">100% <small>(8 / 8)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">100% <small>(0 / 0)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">100% <small>(3 / 3)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">100% <small>(8 / 8)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../index.html">All files</a> &#187; <a href="index.html">src/components/</a> &#187; IssuesTable.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/** 
+ * Copyright (C) 2015 Anonymous Guy 
+ * 
+ * All Rights Reserved
+ * 
+ * You may use, distribute, criticize or tear apart this code under the
+ * terms of the FREE license. Don't worry about patent infringements
+ * or any **** of that kind.
+ */
+&nbsp;
+"use strict";
+&nbsp;
+// Lib Imports
+var React = require("react");
+&nbsp;
+// Our Imports
+var IssueCell = require("./IssueCell");
+&nbsp;
+/**
+ * Renders the Issues table.
+ */
+var IssuesTable = React.createClass({
+    displayName: "IssuesTable",
+&nbsp;
+    /**
+     * Properties
+     * 
+     * {issues} List of issues to render
+     */
+    PropTypes: {
+        issues: React.PropTypes.array
+    },
+&nbsp;
+    /**
+     * Render Issue rows
+     */
+    _renderIssueRows: function _renderIssueRows() {
+        return this.props.issues.map(function (issue, i) {
+            return React.createElement(
+                "tr",
+                { key: issue.number, className: "issue-table-rows" },
+                React.createElement(
+                    "td",
+                    null,
+                    React.createElement(IssueCell, { key: i, issue: issue })
+                )
+            );
+        });
+    },
+    /**
+     * Render issues.
+     */
+    render: function render() {
+        var self = this;
+&nbsp;
+        return React.createElement(
+            "table",
+            { className: "table table-hover issues-main-table" },
+            React.createElement(
+                "thead",
+                null,
+                React.createElement(
+                    "tr",
+                    null,
+                    React.createElement(
+                        "td",
+                        null,
+                        React.createElement(
+                            "b",
+                            null,
+                            "Issues"
+                        )
+                    )
+                )
+            ),
+            React.createElement(
+                "tbody",
+                null,
+                self._renderIssueRows()
+            )
+        );
+    }
+});
+&nbsp;
+module.exports = IssuesTable;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9tb2hraGFuL1V0aWwvZ2lwL3JlYWN0L3NyYy9jb21wb25lbnRzL0lzc3Vlc1RhYmxlLmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7QUFVQSxZQUFZLENBQUM7OztBQUdiLElBQUksS0FBSyxHQUFHLE9BQU8sQ0FBQyxPQUFPLENBQUMsQ0FBQzs7O0FBRzdCLElBQUksU0FBUyxHQUFHLE9BQU8sQ0FBQyxhQUFhLENBQUMsQ0FBQzs7Ozs7QUFLdkMsSUFBSSxXQUFXLEdBQUcsS0FBSyxDQUFDLFdBQVcsQ0FBQzs7Ozs7Ozs7QUFNaEMsYUFBUyxFQUFHO0FBQ1IsY0FBTSxFQUFHLEtBQUssQ0FBQyxTQUFTLENBQUMsS0FBSztLQUNqQzs7Ozs7QUFLRCxvQkFBZ0IsRUFBRyw0QkFBVTtBQUN6QixlQUFPLElBQUksQ0FBQyxLQUFLLENBQUMsTUFBTSxDQUFDLEdBQUcsQ0FBQyxVQUFTLEtBQUssRUFBRSxDQUFDLEVBQUM7QUFDM0MsbUJBQ0k7O2tCQUFJLEdBQUcsRUFBRSxLQUFLLENBQUMsTUFBTSxBQUFDLEVBQUMsU0FBUyxFQUFDLGtCQUFrQjtnQkFDL0M7OztvQkFDSSxvQkFBQyxTQUFTLElBQUMsR0FBRyxFQUFFLENBQUMsQUFBQyxFQUFDLEtBQUssRUFBRSxLQUFLLEFBQUMsR0FBRztpQkFDbEM7YUFDSCxDQUNSO1NBQ0wsQ0FBQyxDQUFDO0tBQ047Ozs7QUFJRCxVQUFNLEVBQUcsa0JBQVU7QUFDZixZQUFJLElBQUksR0FBRyxJQUFJLENBQUM7O0FBRWhCLGVBQ0k7O2NBQU8sU0FBUyxFQUFDLHFDQUFxQztZQUNsRDs7O2dCQUNJOzs7b0JBQ0k7Ozt3QkFBSTs7Ozt5QkFBYTtxQkFBSztpQkFDckI7YUFDRDtZQUNSOzs7Z0JBQ0ssSUFBSSxDQUFDLGdCQUFnQixFQUFFO2FBQ3BCO1NBQ0osQ0FDVjtLQUNMO0NBQ0osQ0FBQyxDQUFDOztBQUVILE1BQU0sQ0FBQyxPQUFPLEdBQUcsV0FBVyxDQUFDIiwiZmlsZSI6Ii9Vc2Vycy9tb2hraGFuL1V0aWwvZ2lwL3JlYWN0L3NyYy9jb21wb25lbnRzL0lzc3Vlc1RhYmxlLmpzIiwic291cmNlc0NvbnRlbnQiOlsiLyoqIFxuICogQ29weXJpZ2h0IChDKSAyMDE1IEFub255bW91cyBHdXkgXG4gKiBcbiAqIEFsbCBSaWdodHMgUmVzZXJ2ZWRcbiAqIFxuICogWW91IG1heSB1c2UsIGRpc3RyaWJ1dGUsIGNyaXRpY2l6ZSBvciB0ZWFyIGFwYXJ0IHRoaXMgY29kZSB1bmRlciB0aGVcbiAqIHRlcm1zIG9mIHRoZSBGUkVFIGxpY2Vuc2UuIERvbid0IHdvcnJ5IGFib3V0IHBhdGVudCBpbmZyaW5nZW1lbnRzXG4gKiBvciBhbnkgKioqKiBvZiB0aGF0IGtpbmQuXG4gKi9cblxuJ3VzZSBzdHJpY3QnO1xuXG4vLyBMaWIgSW1wb3J0c1xudmFyIFJlYWN0ID0gcmVxdWlyZSgncmVhY3QnKTtcblxuLy8gT3VyIEltcG9ydHNcbnZhciBJc3N1ZUNlbGwgPSByZXF1aXJlKCcuL0lzc3VlQ2VsbCcpO1xuXG4vKipcbiAqIFJlbmRlcnMgdGhlIElzc3VlcyB0YWJsZS5cbiAqL1xudmFyIElzc3Vlc1RhYmxlID0gUmVhY3QuY3JlYXRlQ2xhc3Moe1xuICAgIC8qKlxuICAgICAqIFByb3BlcnRpZXNcbiAgICAgKiBcbiAgICAgKiB7aXNzdWVzfSBMaXN0IG9mIGlzc3VlcyB0byByZW5kZXJcbiAgICAgKi9cbiAgICBQcm9wVHlwZXMgOiB7XG4gICAgICAgIGlzc3VlcyA6IFJlYWN0LlByb3BUeXBlcy5hcnJheSAgICBcbiAgICB9LFxuICAgIFxuICAgIC8qKlxuICAgICAqIFJlbmRlciBJc3N1ZSByb3dzXG4gICAgICovXG4gICAgX3JlbmRlcklzc3VlUm93cyA6IGZ1bmN0aW9uKCl7XG4gICAgICAgIHJldHVybiB0aGlzLnByb3BzLmlzc3Vlcy5tYXAoZnVuY3Rpb24oaXNzdWUsIGkpe1xuICAgICAgICAgICAgcmV0dXJuIChcbiAgICAgICAgICAgICAgICA8dHIga2V5PXtpc3N1ZS5udW1iZXJ9IGNsYXNzTmFtZT1cImlzc3VlLXRhYmxlLXJvd3NcIj5cbiAgICAgICAgICAgICAgICAgICAgPHRkPlxuICAgICAgICAgICAgICAgICAgICAgICAgPElzc3VlQ2VsbCBrZXk9e2l9IGlzc3VlPXtpc3N1ZX0gLz5cbiAgICAgICAgICAgICAgICAgICAgPC90ZD5cbiAgICAgICAgICAgICAgICAgPC90cj5cbiAgICAgICAgICAgICk7XG4gICAgICAgIH0pO1xuICAgIH0sXG4gICAgLyoqXG4gICAgICogUmVuZGVyIGlzc3Vlcy5cbiAgICAgKi9cbiAgICByZW5kZXIgOiBmdW5jdGlvbigpe1xuICAgICAgICB2YXIgc2VsZiA9IHRoaXM7XG4gICAgICAgIFxuICAgICAgICByZXR1cm4gKFxuICAgICAgICAgICAgPHRhYmxlIGNsYXNzTmFtZT1cInRhYmxlIHRhYmxlLWhvdmVyIGlzc3Vlcy1tYWluLXRhYmxlXCI+XG4gICAgICAgICAgICAgICAgPHRoZWFkPlxuICAgICAgICAgICAgICAgICAgICA8dHI+XG4gICAgICAgICAgICAgICAgICAgICAgICA8dGQ+PGI+SXNzdWVzPC9iPjwvdGQ+XG4gICAgICAgICAgICAgICAgICAgIDwvdHI+XG4gICAgICAgICAgICAgICAgPC90aGVhZD5cbiAgICAgICAgICAgICAgICA8dGJvZHk+XG4gICAgICAgICAgICAgICAgICAgIHtzZWxmLl9yZW5kZXJJc3N1ZVJvd3MoKX1cbiAgICAgICAgICAgICAgICA8L3Rib2R5PlxuICAgICAgICAgICAgPC90YWJsZT4gICBcbiAgICAgICAgKTtcbiAgICB9XG59KTtcblxubW9kdWxlLmV4cG9ydHMgPSBJc3N1ZXNUYWJsZTtcbiJdfQ==</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon Aug 24 2015 16:28:23 GMT-0700 (PDT)</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

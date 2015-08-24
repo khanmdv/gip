@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/models/GitLabel.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../prettify.css">
+    <link rel="stylesheet" href="../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header high">
+    <h1>Code coverage report for <span class="entity">src/models/GitLabel.js</span></h1>
+    <h2>
+        Statements: <span class="metric">85.71% <small>(6 / 7)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">100% <small>(0 / 0)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">66.67% <small>(2 / 3)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">85.71% <small>(6 / 7)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../index.html">All files</a> &#187; <a href="index.html">src/models/</a> &#187; GitLabel.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/** 
+ * Copyright (C) 2015 Anonymous Guy 
+ * 
+ * All Rights Reserved
+ * 
+ * You may use, distribute, criticize or tear apart this code under the
+ * terms of the FREE license. Don't worry about patent infringements
+ * or any **** of that kind.
+ */
+&nbsp;
+"use strict";
+&nbsp;
+// Our Imports
+var utils = require("../utils");
+&nbsp;
+/**
+ * GitLabel Class - Represents a label.
+ */
+var GitLabel = function GitLabel() {};
+&nbsp;
+/**
+ * Class Methods
+ */
+utils.extend(GitLabel, {
+&nbsp;
+    /**
+     * Mapping between REST API and class properties.
+     */
+    JSONKeyValueMap: function JSONKeyValueMap() {
+        return {
+            url: "url",
+            name: "name",
+            color: "color"
+        };
+    }
+});
+&nbsp;
+/**
+ * Instance Methods
+ */
+GitLabel.prototype = {
+    toString: <span class="fstat-no" title="function not covered" >function toString() {</span>
+<span class="cstat-no" title="statement not covered" >        return JSON.stringify({</span>
+            url: this.url,
+            name: this.name,
+            color: this.color
+        }, null, 4);
+    }
+};
+&nbsp;
+module.exports = GitLabel;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9tb2hraGFuL1V0aWwvZ2lwL3JlYWN0L3NyYy9tb2RlbHMvR2l0TGFiZWwuanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7OztBQVVBLFlBQVksQ0FBQzs7O0FBR2IsSUFBSSxLQUFLLEdBQUcsT0FBTyxDQUFDLFVBQVUsQ0FBQyxDQUFDOzs7OztBQUtoQyxJQUFJLFFBQVEsR0FBRyxvQkFBVSxFQUN4QixDQUFDOzs7OztBQUtGLEtBQUssQ0FBQyxNQUFNLENBQUMsUUFBUSxFQUFFOzs7OztBQUtuQixtQkFBZSxFQUFHLDJCQUFVO0FBQ3hCLGVBQU87QUFDSCxpQkFBYSxLQUFLO0FBQ2xCLGtCQUFhLE1BQU07QUFDbkIsbUJBQWEsT0FBTztTQUN2QixDQUFDO0tBQ0w7Q0FDSixDQUFDLENBQUM7Ozs7O0FBS0gsUUFBUSxDQUFDLFNBQVMsR0FBRztBQUNqQixZQUFRLEVBQUcsb0JBQVU7QUFDakIsZUFBTyxJQUFJLENBQUMsU0FBUyxDQUFDO0FBQ2xCLGlCQUFVLElBQUksQ0FBQyxHQUFHO0FBQ2xCLGtCQUFjLElBQUksQ0FBQyxJQUFJO0FBQ3ZCLG1CQUFhLElBQUksQ0FBQyxLQUFLO1NBQzFCLEVBQUUsSUFBSSxFQUFFLENBQUMsQ0FBQyxDQUFDO0tBQ2Y7Q0FDSixDQUFDOztBQUVGLE1BQU0sQ0FBQyxPQUFPLEdBQUcsUUFBUSxDQUFDIiwiZmlsZSI6Ii9Vc2Vycy9tb2hraGFuL1V0aWwvZ2lwL3JlYWN0L3NyYy9tb2RlbHMvR2l0TGFiZWwuanMiLCJzb3VyY2VzQ29udGVudCI6WyIvKiogXG4gKiBDb3B5cmlnaHQgKEMpIDIwMTUgQW5vbnltb3VzIEd1eSBcbiAqIFxuICogQWxsIFJpZ2h0cyBSZXNlcnZlZFxuICogXG4gKiBZb3UgbWF5IHVzZSwgZGlzdHJpYnV0ZSwgY3JpdGljaXplIG9yIHRlYXIgYXBhcnQgdGhpcyBjb2RlIHVuZGVyIHRoZVxuICogdGVybXMgb2YgdGhlIEZSRUUgbGljZW5zZS4gRG9uJ3Qgd29ycnkgYWJvdXQgcGF0ZW50IGluZnJpbmdlbWVudHNcbiAqIG9yIGFueSAqKioqIG9mIHRoYXQga2luZC5cbiAqL1xuXG4ndXNlIHN0cmljdCc7XG5cbi8vIE91ciBJbXBvcnRzXG52YXIgdXRpbHMgPSByZXF1aXJlKCcuLi91dGlscycpO1xuXG4vKipcbiAqIEdpdExhYmVsIENsYXNzIC0gUmVwcmVzZW50cyBhIGxhYmVsLlxuICovXG52YXIgR2l0TGFiZWwgPSBmdW5jdGlvbigpe1xufTtcblxuLyoqXG4gKiBDbGFzcyBNZXRob2RzXG4gKi9cbnV0aWxzLmV4dGVuZChHaXRMYWJlbCwge1xuICAgIFxuICAgIC8qKlxuICAgICAqIE1hcHBpbmcgYmV0d2VlbiBSRVNUIEFQSSBhbmQgY2xhc3MgcHJvcGVydGllcy5cbiAgICAgKi9cbiAgICBKU09OS2V5VmFsdWVNYXAgOiBmdW5jdGlvbigpe1xuICAgICAgICByZXR1cm4ge1xuICAgICAgICAgICAgXCJ1cmxcIiAgICAgIDogXCJ1cmxcIixcbiAgICAgICAgICAgIFwibmFtZVwiICAgICA6IFwibmFtZVwiLFxuICAgICAgICAgICAgXCJjb2xvclwiICAgIDogXCJjb2xvclwiXG4gICAgICAgIH07XG4gICAgfVxufSk7XG5cbi8qKlxuICogSW5zdGFuY2UgTWV0aG9kc1xuICovXG5HaXRMYWJlbC5wcm90b3R5cGUgPSB7XG4gICAgdG9TdHJpbmcgOiBmdW5jdGlvbigpe1xuICAgICAgICByZXR1cm4gSlNPTi5zdHJpbmdpZnkoe1xuICAgICAgICAgICAgXCJ1cmxcIiAgIDogdGhpcy51cmwsXG4gICAgICAgICAgICBcIm5hbWVcIiAgICAgIDogdGhpcy5uYW1lLFxuICAgICAgICAgICAgXCJjb2xvclwiICAgIDogdGhpcy5jb2xvclxuICAgICAgICB9LCBudWxsLCA0KTtcbiAgICB9XG59O1xuXG5tb2R1bGUuZXhwb3J0cyA9IEdpdExhYmVsO1xuXG4iXX0=</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon Aug 24 2015 16:28:23 GMT-0700 (PDT)</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>
