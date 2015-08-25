@@ -4,9 +4,8 @@
   "description": "Issues viewer for Github",
   "scripts": {
     "lint": "grunt jshint",
-    "start": "webpack-dev-server --content-base build/ --hot",
     "pretest": "npm run-script lint",
-    "test": "istanbul test _mocha -- test/**/* --recursive --compilers js:babel/register"
+    "test": "./node_modules/.bin/istanbul test _mocha -- test/**/* --recursive --compilers js:babel/register"
   },
   "dependencies": {
     "babel": "^4.6.3",
