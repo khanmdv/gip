@@ -14,6 +14,9 @@
 var React = require('react');
 var marked = require('marked');
 
+var OverlayTrigger = require('react-bootstrap').OverlayTrigger;
+var Tooltip = require('react-bootstrap').Tooltip;
+
 // Our Imports
 var API = require('../API');
 var GitIssue = require('../models/GitIssue');
@@ -134,14 +137,20 @@ var IssueDetail = React.createClass({
 
         if (issue){
             
-            var issueStateIconColor = issue.state === GitIssue.IssueState.Open ? 'orange' : 'green';
+            var issueStateIconColor = issue.state === GitIssue.IssueState.IssueStateOpen ? 'orange' : 'green';
+            
+            var issueStateTooltip = issue.state === GitIssue.IssueState.IssueStateOpen ? 'open' : 'closed';
+            var tooltipElement = <Tooltip placement='top'>{issueStateTooltip}</Tooltip>
             
             issueHeader =   <div className="issues-header">
                                 <h3><span className="text-muted">npm / #{issue.number}</span></h3>
                             </div>
             
-            issueInfo =   <div>
-                                <i className="fa fa-dot-circle-o issue-state" style={{color : issueStateIconColor}}>&nbsp;</i>&nbsp;&nbsp;<h3 className="issue-title">{issue.title}&nbsp;&nbsp;<span className="text-muted">#{issue.number}</span></h3>
+            issueInfo =     <div className="issue-info">
+                                <OverlayTrigger overlay={tooltipElement} delayShow={50} delayHide={50}>
+                                    <i className="fa fa-dot-circle-o issue-state" style={{color : issueStateIconColor}}>&nbsp;</i>
+                                </OverlayTrigger>&nbsp;&nbsp;
+                                <h3 className="issue-title">{issue.title}&nbsp;&nbsp;<span className="text-muted">#{issue.number}</span></h3>
                                 <br/>
                                 <div className="issue-cell-user">{this._renderLabels(issue)}<img className="issue-gravatar" src={issue.user.gravatarURL} />&nbsp;<a className="user-link text-muted" href={issue.user.profileURL}>{issue.user.userName}</a> <span className="text-muted">created {issue.createdAt.fromNow()}</span></div>
                                 <br/>  

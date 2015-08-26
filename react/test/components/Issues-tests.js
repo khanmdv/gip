@@ -240,6 +240,9 @@ describe('Issues Tests', function() {
             userAgent: 'node.js'
         };
         
+        global.addEventListener = function(){};
+        global.removeEventListener = function(){};
+        
         require('react/lib/ExecutionEnvironment').canUseDOM = true;
         
         React = require('react/addons');
@@ -346,8 +349,8 @@ describe('Issues Tests', function() {
             return ModelObject.getModelOfClassFromJSON(GitIssue, issueJSON);
         });
         
-        fetchIssuesStub.onCall(0).callsArgWith(1, [], null);
-        fetchIssuesStub.onCall(1).callsArgWith(1, mockIssues, null);
+        fetchIssuesStub.onCall(1).callsArgWith(1, [], null);
+        fetchIssuesStub.onCall(2).callsArgWith(1, mockIssues, null);
         
         var testComponent = TestUtils.renderIntoDocument(
             <TestComponent />

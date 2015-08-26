@@ -53,10 +53,8 @@ module.exports = function(grunt) {
                     middleware : function(connect, options, middlewares) {
                         // inject a custom middleware into the array of default middlewares
                         middlewares.unshift(function(req, res, next) {
-                            var addDelay = false;
                             if (!html){
                                 html = fs.readFileSync(__dirname + '/build/index.html');
-                                addDelay = true;
                             }
                             
                             function run(){
@@ -67,11 +65,7 @@ module.exports = function(grunt) {
                                 }
                             }
                             
-                            if (addDelay){
-                                setTimeout(run, 5000);
-                            } else {
-                                run();
-                            }
+                            run();
                         });
 
                         return middlewares;
@@ -124,5 +118,6 @@ module.exports = function(grunt) {
 
     // tasks
     grunt.registerTask('default', ['clean', 'copy', 'jshint', 'concurrent:dev']);
+    grunt.registerTask('run', ['connect']);
 };
 

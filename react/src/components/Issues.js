@@ -57,6 +57,7 @@ var Issues = React.createClass({
         // Show the loading indicator
         state.activePage = activePage;
         state.loading = true;
+        state.error = null;
         
         API.getIssuesForPage(state.activePage, function(issues, error){
             state.loading = false;
@@ -87,6 +88,42 @@ var Issues = React.createClass({
     },
     
     /**
+     * Does some accessibility control.
+     * On the issues page when tab key is clicked it moves through
+     * the issue title links. Pressing Enter on it will go to the corresponding 
+     * issue page.
+     * 
+     * Using jQuery here for some DOM searching. jQuery
+     * can work with react as long as we don't manipulate the DOM thereby 
+     * breaking react's virtual DOM.
+     */
+    _listenForKeyEvents : function(keyEvent){
+        
+        if (keyEvent.keyCode === 9){ // Tab key
+            var currentLink = global.$('a.issue-title-link.focus');
+            if (currentLink.length === 0){
+                global.$('a[tabIndex="0"]').addClass('focus');
+            } else {
+                global.$(currentLink).removeClass('focus');
+                
+                // Find the next link
+                var currentTabIndex = parseInt(currentLink.attr('tabIndex'));
+                var nextLink = global.$('a[tabIndex="' + (currentTabIndex+1) + '"]');
+                if (nextLink.length > 0){
+                    nextLink.addClass('focus');
+                } else {
+                    global.$('a[tabIndex="0"]').addClass('focus');
+                }
+            }
+        } else if (keyEvent.keyCode === 13){ // ENter key
+            var currentLink = global.$('a.issue-title-link.focus');
+            if (currentLink.length > 0 && global.location.hash){
+                Router.HashLocation.push(currentLink.attr('href'));
+            }
+        }
+    },
+    
+    /**
      * Lifecycle Methods     
      */
     componentWillReceiveProps(nextProps) {
@@ -94,6 +131,14 @@ var Issues = React.createClass({
     },
     componentWillMount : function(){
         this._fetchIssues();
+        if (global.addEventListener){
+            global.addEventListener("keydown", this._listenForKeyEvents, true);
+        }
+    },
+    componentWillUnmount : function(){
+        if (global.removeEventListener){
+            global.removeEventListener("keydown", this._listenForKeyEvents, true);
+        }
     },
     
     /**

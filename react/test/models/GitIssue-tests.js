@@ -52,6 +52,34 @@ describe('GitIssue Tests', function() {
         done();
     });
     
+    it('Should return valid issue state', function(done) {
+
+        var mockJSON = {
+            "html_url" : "https://github.com/npm/npm/issues/9351",
+            "number" : 9351,
+            "title" : "Why don't other encoded chars like %40 work in registry URLs?",
+            "created_at" : "2015-08-18T00:04:02Z",
+            "user" : {
+                "login" : "jameslnewell",
+                "avatar_url" : "https://avatars.githubusercontent.com/u/2237996?v=3",
+                "html_url" : "https://github.com/jameslnewell",
+            },
+            "labels" : [{
+                name : 'test',
+                color : 'fff',
+                url : "https://api.github.com/repos/octocat/Hello-World/labels/bug"
+            }],
+            "state" : "open",
+            "body" : "eg:\r\n\r\n    http://registry.npmjs.com/%40digitaledgeit%2fpaypal => 404\r\n    http://registry.npmjs.com/@digitaledgeit%2fpaypal => 200\r\n\r\nIs it a bug? The reason I ask: https://github.com/rlidwka/sinopia/pull/280#issuecomment-120665175\r\n"
+        };
+
+        var issue = ModelObject.getModelOfClassFromJSON(GitIssue, mockJSON);
+
+        expect(issue).to.be.ok;
+        expect(issue.state).to.equal(GitIssue.IssueState.IssueStateOpen);
+        done();
+    });
+    
     it('Should have valid issue user', function(done){
         var mockJSON = {
             "html_url" : "https://github.com/npm/npm/issues/9351",

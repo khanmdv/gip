@@ -29,7 +29,8 @@ var IssueCell = React.createClass({
      * {issue} GitIssue object
      */
     PropTypes : {
-        issue : React.PropTypes.object
+        issue : React.PropTypes.object,
+        tabIndex : React.PropTypes.number
     },
     _renderLabels : function(){
         return this.props.issue.labels.map(function(label, i){
@@ -52,7 +53,7 @@ var IssueCell = React.createClass({
                 {/* Issue Header */}
                 <h4 className="issue-title">
                     <span className="text-muted">#{this.props.issue.number}</span>&nbsp;&nbsp;
-                    <Link to={'/issue/' + this.props.issue.number}>{this.props.issue.title}</Link>
+                    <Link className="issue-title-link" tabIndex={this.props.tabIndex} to={'/issue/' + this.props.issue.number}>{this.props.issue.title}</Link>
                 </h4>&nbsp;{self._renderLabels()}
                 
                 {/* User info */}

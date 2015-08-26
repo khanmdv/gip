@@ -37,7 +37,7 @@ var IssuesTable = React.createClass({
             return (
                 <tr key={issue.number} className="issue-table-rows">
                     <td>
-                        <IssueCell key={i} issue={issue} />
+                        <IssueCell key={i} issue={issue} tabIndex={i}/>
                     </td>
                  </tr>
             );
