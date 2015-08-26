@@ -16,7 +16,7 @@ Build & Run
 3. $> cd <install dir>/react
 4. $> npm install
 5. $> ./node_modules/.bin/grunt
-6. Wait...
+6. 1 Mississippi 2 Mississippi 3 Mississippi 4 Mississippi.
 
 Note: Try ```npm install``` with sudo if it fails with permission error.
 
@@ -25,11 +25,11 @@ Tests
 
 To run unit tests...
 
-cd <install dir>/react
+$> cd <install dir>/react
 $> npm test --coverage
 
 Notes:
-My Windows VM crashed so I could not build & run it there also I didn't get a chance to test on IE, but Ihope it works. I apologize if this does not work in Windows/IE.
+My Windows VM crashed so I could not build & run on it. I apologize if this does not work in Windows/IE.
 
 
 
