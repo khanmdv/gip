@@ -11,7 +11,7 @@ Prerequisites
 Build & Run
 ===========
 
-1. Install python. (http://python.org)(v2.7.x)
+1. Install python. (http://python.org) [v2.7.x]
 2. Install NodeJS/NPM. (http://nodejs.org)
 3. $> cd <install dir>/react
 4. $> npm install
