@@ -103,6 +103,34 @@ module.exports = function(grunt) {
                 devtool : 'source-map',
                 watch : true,
                 keepalive : true
+            },
+            prod : {
+                resolve : {
+                    extensions : ['', '.js', '.jsx']
+                },
+                entry : './src/main.js',
+                output : {
+                    path : './build/js',
+                    publicPath : '/public/js/',
+                    filename : '[name].min.js'
+                },
+                module : {
+                    loaders : [{
+                        test : /\.css$/,
+                        loader : 'style!css'
+                    }, {
+                        test : /\.(js|jsx)$/,
+                        exclude : /node_modules/,
+                        loader : require.resolve('babel-loader')
+                    }, {
+                        test : /\.json$/,
+                        loader : 'json-loader'
+                    }]
+                },
+                stats : {
+                    colors : true
+                },
+                devtool : 'source-map'
             }
         }
     });
@@ -117,7 +145,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');
 
     // tasks
-    grunt.registerTask('default', ['clean', 'copy', 'jshint', 'concurrent:dev']);
-    grunt.registerTask('run', ['connect']);
+    grunt.registerTask('default', ['clean', 'copy', 'jshint', 'webpack:prod', 'connect']);
+    grunt.registerTask('dev', ['clean', 'copy', 'jshint', 'concurrent:dev']);
 };
 
