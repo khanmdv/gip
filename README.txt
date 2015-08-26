@@ -11,14 +11,14 @@ Prerequisites
 Build & Run
 ===========
 
-1. Install python. (http://python.org)
+1. Install python. (http://python.org)(v2.7.x)
 2. Install NodeJS/NPM. (http://nodejs.org)
 3. $> cd <install dir>/react
 4. $> npm install
 5. $> ./node_modules/.bin/grunt
 6. 1 Mississippi 2 Mississippi 3 Mississippi 4 Mississippi.
 
-Note: Try ```npm install``` with sudo if it fails with permission error.
+Note: Try ```npm install``` with sudo if it fails with permission error. Also, you might see some errors with npm install. If you do try running through the steps further. I found that the app worked despite some errors with npm install on another machine.
 
 Tests
 =====
